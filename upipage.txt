@@ -1,0 +1,115 @@
+<html>
+ <head>
+  <title>
+   UPI Payment
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .payment-option {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .payment-option label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .payment-option img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .pay-button {
+            display: block;
+            width: calc(100% - 30px);
+            margin: 15px auto;
+            padding: 15px;
+            background-color: #f7b500;
+            color: #000;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .additional-option {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #e0e0e0;
+        }
+        .additional-option a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-qrcode">
+    </i>
+    <h1>
+     UPI
+    </h1>
+   </div>
+   <div class="payment-option">
+    <label>
+     <input checked="" name="upi" type="radio"/>
+     PhonePe
+    </label>
+    <img alt="PhonePe logo" height="30" src="https://storage.googleapis.com/a1aa/image/OzUtcrYJ6qLHFJBQg3t5ULsCHm3UYe2sJAnpAGhxE6X2p54JA.jpg" width="30"/>
+   </div>
+   <button class="pay-button">
+    Pay ₹ 2,552
+   </button>
+   <div class="additional-option">
+    <label>
+     <input name="upi" type="radio"/>
+     Add new UPI ID
+    </label>
+    <a href="#">
+     How to find?
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

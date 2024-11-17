@@ -1,0 +1,95 @@
+<html>
+ <head>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .payment-option:last-child {
+            border-bottom: none;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .payment-option img {
+            width: 40px;
+            height: auto;
+        }
+        .pay-button {
+            background-color: #808080;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-history">
+    </i>
+    <span>
+     Saved Payment Options
+    </span>
+    <i class="fas fa-chevron-up">
+    </i>
+   </div>
+   <div class="payment-option">
+    <div>
+     <input checked="" name="payment" type="radio"/>
+     <span>
+      7908681475@paytm
+     </span>
+    </div>
+    <img alt="Paytm logo" height="20" src="https://storage.googleapis.com/a1aa/image/0ksF7FagjVKgL1METgfMbwM6tLJCuDRtsXdiD2E1KA1ko54JA.jpg" width="40"/>
+   </div>
+   <button class="pay-button">
+    Pay ₹ 2,552
+   </button>
+   <div class="payment-option">
+    <div>
+     <input name="payment" type="radio"/>
+     <span>
+      soumyadipchangder7@okicici
+     </span>
+    </div>
+    <img alt="Google Pay logo" height="20" src="https://storage.googleapis.com/a1aa/image/ZPU4pHazoQZgDl4QyXleFW2cdzCXUr9R7cpqfEmgYKcHRzxTA.jpg" width="40"/>
+   </div>
+  </div>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </body>
+</html>

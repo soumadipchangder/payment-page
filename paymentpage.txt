@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Payments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header .time {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            margin-left: 10px;
+        }
+        .step {
+            font-size: 14px;
+            color: #888;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .total-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e6f0ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .total-amount span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .total-amount .amount {
+            color: #007bff;
+        }
+        .payment-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .payment-option i {
+            margin-right: 10px;
+        }
+        .payment-option .details {
+            flex-grow: 1;
+        }
+        .payment-option .details .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .payment-option .details .description {
+            font-size: 14px;
+            color: #888;
+        }
+        .payment-option .details .highlight {
+            color: #28a745;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="time">10:52</div>
+            <div class="icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+                <span>42</span>
+            </div>
+        </div>
+        <div class="step">Step 3 of 3</div>
+        <div class="title">Payments</div>
+        <div class="total-amount">
+            <span>Total Amount</span>
+            <span class="amount">₹ 2,552</span>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-history"></i>
+            <div class="details">
+                <div class="title">Saved Payment Options</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-mobile-alt"></i>
+            <div class="details">
+                <div class="title">UPI</div>
+                <div class="description">Pay by any UPI app</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-credit-card"></i>
+            <div class="details">
+                <div class="title">Credit / Debit / ATM Card</div>
+                <div class="description">Add and secure cards as per RBI guidelines</div>
+                <div class="highlight">5% Unlimited Cashback on Flipkart Axis Bank Credit Card</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-percentage"></i>
+            <div class="details">
+                <div class="title">EMI</div>
+                <div class="description">Get Debit and Cardless EMIs on HDFC Bank</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-university"></i>
+            <div class="details">
+                <div class="title">Net Banking</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-wallet"></i>
+            <div class="details">
+                <div class="title">Wallets</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-money-bill-wave"></i>
+            <div class="details">
+                <div class="title">Cash on Delivery</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-option">
+            <i class="fas fa-gift"></i>
+            <div class="details">
+                <div class="title">Have a Flipkart Gift Card?</div>
+            </div>
+            <span>Add</span>
+        </div>
+        <div class="footer">35 Crore happy customers</div>
+    </div>
+</body>
+</html>

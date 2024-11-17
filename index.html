@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <img src="https://storage.googleapis.com/a1aa/image/Xw06pBot51bAHdcY50Hf5WIwKYFr2WmcV5F6hP4fzFaTcnxTA.jpg" alt="Logo" width="40">
+    <h1>My E-Commerce Platform</h1>
+  </header>
+
+  <main class="container">
+    <!-- Payment Options Section -->
+    <section class="section payment-options">
+      <h2>Payment Options</h2>
+      <p class="timer" aria-live="polite">Complete payment in <span id="timer">13:26</span></p>
+      <form id="payment-form">
+        <!-- Saved Payment Options -->
+        <div class="payment-option" onclick="toggleDetails(this)">
+          <i class="fas fa-history"></i>
+          <div class="details">
+            <div class="title">Saved Payment Options</div>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-detail">Details about Saved Payment Options</div>
+
+        <!-- UPI Payment Option -->
+        <div class="payment-option" onclick="toggleDetails(this)">
+          <i class="fas fa-mobile-alt"></i>
+          <div class="details">
+            <div class="title">UPI</div>
+            <div class="description">Pay by any UPI app</div>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-detail">Details about UPI Payment</div>
+
+        <!-- Credit/Debit/ATM Card Option -->
+        <div class="payment-option" onclick="toggleDetails(this)">
+          <i class="fas fa-credit-card"></i>
+          <div class="details">
+            <div class="title">Credit / Debit / ATM Card</div>
+            <div class="description">Add and secure cards as per RBI guidelines</div>
+            <div class="highlight">5% Unlimited Cashback on Flipkart Axis Bank Credit Card</div>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-detail">Details about Credit/Debit Card</div>
+
+        <!-- Cash on Delivery Option -->
+        <div class="payment-option" onclick="toggleDetails(this)">
+          <i class="fas fa-money-bill-wave"></i>
+          <div class="details">
+            <div class="title">Cash on Delivery</div>
+            <div class="description">Pay when the order arrives at your doorstep</div>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="payment-detail">Details about Cash on Delivery</div>
+
+        <!-- Continue Button -->
+        <button type="submit" class="continue-button">Continue</button>
+      </form>
+    </section>
+
+    <!-- Coupon Code Section -->
+    <section class="section coupon-section">
+      <h3>Have a Coupon?</h3>
+      <input type="text" id="coupon-code" placeholder="Enter coupon code">
+      <button id="apply-coupon" class="apply-button">Apply</button>
+      <p id="coupon-message" class="coupon-message"></p>
+    </section>
+
+    <!-- Price Details Section -->
+    <section class="price-details">
+      <h2>Price Details</h2>
+      <div class="price-item">
+        <span>Price (1 item):</span>
+        <span>₹2,549</span>
+      </div>
+      <div class="price-item">
+        <span>Delivery Charges:</span>
+        <span class="green">FREE</span>
+      </div>
+      <div class="price-item">
+        <span>Platform Fee:</span>
+        <span>₹3</span>
+      </div>
+      <div class="price-total">
+        <span>Total Payable:</span>
+        <span id="total-amount">₹2,552</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 My E-Commerce Platform</p>
+  </footer>
+
+  <!-- Payment Summary Modal -->
+  <div id="payment-summary-modal" class="modal">
+    <div class="modal-content">
+      <h3>Payment Summary</h3>
+      <ul>
+        <li>Item Price: ₹2,549</li>
+        <li>Delivery Fee: Free</li>
+        <li>Platform Fee: ₹3</li>
+        <li>Total Payable: ₹2,552</li>
+      </ul>
+      <button id="confirm-payment" class="confirm-button">Confirm Payment</button>
+      <button id="close-modal" class="close-button">Close</button>
+    </div>
+  </div>
+
+  <!-- Chat Button -->
+  <button id="support-chat" class="chat-button">Need Help? Chat Now</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
