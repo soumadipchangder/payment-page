@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <header class="header">
@@ -19,6 +19,7 @@
       <h2>Payment Options</h2>
       <p class="timer" aria-live="polite">Complete payment in <span id="timer">13:26</span></p>
       <form id="payment-form">
+        
         <!-- Saved Payment Options -->
         <div class="payment-option" onclick="toggleDetails(this)">
           <i class="fas fa-history"></i>
@@ -27,7 +28,23 @@
           </div>
           <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="payment-detail">Details about Saved Payment Options</div>
+        <div class="payment-detail">
+          <div class="payment-option">
+            <div>
+              <input checked name="payment" type="radio"/>
+              <span>1234567890@paytm</span>
+            </div>
+            <img alt="Paytm logo" height="20" src="https://storage.googleapis.com/a1aa/image/0ksF7FagjVKgL1METgfMbwM6tLJCuDRtsXdiD2E1KA1ko54JA.jpg" width="40"/>
+          </div>
+          <div class="payment-option">
+            <div>
+              <input name="payment" type="radio"/>
+              <span>abc@okicici</span>
+            </div>
+            <img alt="Google Pay logo" height="20" src="https://storage.googleapis.com/a1aa/image/ZPU4pHazoQZgDl4QyXleFW2cdzCXUr9R7cpqfEmgYKcHRzxTA.jpg" width="40"/>
+          </div>
+          <button class="pay-button">Pay ₹ 2,552</button>
+        </div>
 
         <!-- UPI Payment Option -->
         <div class="payment-option" onclick="toggleDetails(this)">
@@ -38,7 +55,27 @@
           </div>
           <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="payment-detail">Details about UPI Payment</div>
+        <div class="payment-detail">
+          <div class="header">
+            <i class="fas fa-qrcode"></i>
+            <h1>UPI</h1>
+          </div>
+          <div class="payment-option">
+            <label>
+              <input checked name="upi" type="radio"/>
+              PhonePe
+            </label>
+            <img alt="PhonePe logo" src="https://storage.googleapis.com/a1aa/image/OzUtcrYJ6qLHFJBQg3t5ULsCHm3UYe2sJAnpAGhxE6X2p54JA.jpg"/>
+          </div>
+          <button class="pay-button">Pay ₹ 2,552</button>
+          <div class="additional-option">
+            <label>
+              <input name="upi" type="radio"/>
+              Add new UPI ID
+            </label>
+            <a href="#">How to find?</a>
+          </div>
+        </div>
 
         <!-- Credit/Debit/ATM Card Option -->
         <div class="payment-option" onclick="toggleDetails(this)">
@@ -50,18 +87,50 @@
           </div>
           <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="payment-detail">Details about Credit/Debit Card</div>
+        <div class="payment-detail">
+          <div class="payment-container">
+            <!-- card payment option -->
+            <p class="note">Note: Please ensure your card can be used for online transactions. <a href="#">Learn more</a></p>
+        
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <div class="input-icon">
+                <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                <i class="fas fa-credit-card"></i>
+              </div>
+            </div>
+        
+            <div class="form-row">
+              <div class="form-group">
+                <label for="valid-thru">Valid Thru</label>
+                <input type="text" id="valid-thru" placeholder="MM / YY" maxlength="5" required>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <div class="input-icon">
+                  <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                  <i class="fas fa-question-circle"></i>
+                </div>
+              </div>
+            </div>
+        
+            <button class="pay-button">Pay ₹ 2,552</button>
+          </div>
+        </div>
+        
 
         <!-- Cash on Delivery Option -->
         <div class="payment-option" onclick="toggleDetails(this)">
-          <i class="fas fa-money-bill-wave"></i>
+          <i class="fas fa-money-bill-alt"></i>
           <div class="details">
             <div class="title">Cash on Delivery</div>
-            <div class="description">Pay when the order arrives at your doorstep</div>
           </div>
           <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="payment-detail">Details about Cash on Delivery</div>
+        <div class="payment-detail" id="cod-details">
+          <p>Due to handling costs, a nominal fee of ₹10 will be charged</p>
+          <button class="button" id="place-order-btn">Place Order</button>
+        </div>
 
         <!-- Continue Button -->
         <button type="submit" class="continue-button">Continue</button>
